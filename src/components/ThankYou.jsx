@@ -1,7 +1,10 @@
 import Image from "next/image";
 import { StepHeading } from "./"
+import { useContext } from "react";
+import { FormContext } from "@/pages/_app";
 
 const ThankYou = () => {
+  const { state } = useContext(FormContext);
   return (
     <div className="gap-8 flex flex-col items-center text-center justify-center h-full max-w-[27rem]">
       <Image src="/icon-thank-you.svg" width={`100`} height={`100`} alt={``} />

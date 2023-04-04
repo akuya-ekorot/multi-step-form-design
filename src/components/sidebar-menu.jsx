@@ -2,12 +2,11 @@ import { FormContext } from "@/pages/_app";
 import { useContext } from "react";
 
 const SideBarMenu = ({ step, text }) => {
-  const { state, dispatch } = useContext(FormContext);
+  const { state } = useContext(FormContext);
 
   return (
     <div
-      onClick={() => dispatch({ type: "SET_ACTIVE_STEP", payload: step })}
-      className={`cursor-pointer flex flex-row items-center gap-4`}
+      className={`flex flex-row items-center gap-4`}
     >
       <div
         className={`p-2 ${

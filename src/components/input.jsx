@@ -1,4 +1,4 @@
-const Input = ({ label, placeholder, type, name }) => {
+const Input = ({ defaultValue, register, label, placeholder, type, name }) => {
   return (
     <div className="flex flex-col gap-2">
       <label className="" htmlFor={name}>{label}</label>
@@ -8,6 +8,8 @@ const Input = ({ label, placeholder, type, name }) => {
         name={name}
         placeholder={placeholder}
         type={type}
+        defaultValue={defaultValue}
+        {...register(name)}
       />
     </div>
   );
