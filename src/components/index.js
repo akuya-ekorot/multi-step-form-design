@@ -6,3 +6,8 @@ export { default as YourInfo } from "./YourInfo";
 export { default as SelectPlan } from "./SelectPlan";
 export { default as AddOns } from "./AddOns";
 export { default as Summary } from "./Summary";
+export { default as StepHeading } from "./StepHeading";
+export { default as PlanCard } from "./PlanCard";
+export { default as Button } from "./Button";
+export { default as AddOnCard } from "./AddOnCard";
+export { default as ThankYou } from "./ThankYou";

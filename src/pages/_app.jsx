@@ -13,7 +13,7 @@ export default function App({ Component, pageProps }) {
       }
     },
     {
-      activeStep: 1,
+      activeStep: 5,
     }
   );
 
