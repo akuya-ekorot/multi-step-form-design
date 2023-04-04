@@ -1,9 +1,22 @@
 import { useContext } from "react";
 import { Button, StepHeading } from "./"
 import { FormContext } from "@/pages/_app";
+import { collection, addDoc } from "firebase/firestore";
+import { db } from "@/utils/firestore";
 
 const Summary = () => {
   const { state, dispatch } = useContext(FormContext);
+
+  const handleOrder = async (data) => {
+    dispatch(data);
+
+    try {
+      const docRef = await addDoc(collection(db, "subscriptions"), data.payload);
+      console.log("Document written with ID: ", docRef.id);
+    } catch (e) {
+      console.error(e)
+    }
+  }
 
   return (
     <>
@@ -41,7 +54,7 @@ const Summary = () => {
             text="Go Back"
           />
         </div>
-        <div onClick={() => dispatch({ type: "SET_ORDER", payload: {customer: state.personalInfo, plan: state.activePlan, addOns: state.activeAddOns, total: state.total, frequency: state.frequency}})}>
+        <div onClick={() => handleOrder({ type: "SET_ORDER", payload: {customer: state.personalInfo, plan: state.activePlan, addOns: state.activeAddOns, total: state.total, frequency: state.frequency}})}>
           <Button
             text="Confirm"
             primary
