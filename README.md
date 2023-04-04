@@ -32,8 +32,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/akuya-ekorot/multi-step-form-design)
-- Live Site URL: [Add live site URL here](https://multi-step-form-design.vercel.app/)
+- Solution URL: [github.com](https://github.com/akuya-ekorot/multi-step-form-design)
+- Live Site URL: [vercel deployment](https://multi-step-form-design.vercel.app/)
 
 ## My process
 
